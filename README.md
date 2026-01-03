@@ -75,9 +75,10 @@ and can be accessed and launched independently by authorized users if required.
 
 ## 🔐 QR Generator Note
 
-The QR Code Generator is implemented as a **separate page**.
-In a future version, this feature can be restricted to administrators
-using backend authentication and role-based access control.
+The QR Code Generator is ADDED as a **separate page**.
+In a future version, this feature can be used by administrators
+and can be implemented using backend authentication and role-based
+access control.
 
 ---
 
@@ -92,7 +93,7 @@ using backend authentication and role-based access control.
 
 ## 👤 Author
 
-**Kashish**  
+**Kashish Upadhyay**  
 Frontend Developer | Computer Science Student  
 
 ---
