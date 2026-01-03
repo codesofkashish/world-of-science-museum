@@ -8,7 +8,7 @@ function searchSite() {
 
   // pages & keywords
   const pages = {
-    "home": "/index.html",
+    "home": "../index.html",
     "history": "../html/history.html",
     "about": "../html/about.html",
     "gallery": "../html/gallery.html",
@@ -26,4 +26,5 @@ function searchSite() {
 
   alert("No results found 😔");
 }
+
 
