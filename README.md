@@ -50,5 +50,53 @@ and can be accessed and launched independently by authorized users if required.
 - **JavaScript** – Interactivity and QR generation  
 
 ---
-
+```
 ## 📂 Project Structure
+│
+│
+├── index.html
+│
+├── html/
+│ └── about.html
+│
+├── css/
+│ └── style.css
+│
+├── js/
+│ └── search.js
+│
+├── images/
+│ └── museum-images/
+│
+├── QR_Generator.html
+└── README.md
+
+---
+
+## 🔐 QR Generator Note
+
+The QR Code Generator is implemented as a **separate page**.
+In a future version, this feature can be restricted to administrators
+using backend authentication and role-based access control.
+
+---
+
+## 📈 Future Improvements
+
+- Admin dashboard with backend integration  
+- Database-driven exhibition management  
+- User analytics and visitor tracking  
+- Enhanced accessibility features  
+
+---
+
+## 👤 Author
+
+**Kashish**  
+Frontend Developer | Computer Science Student  
+
+---
+
+⭐ If you like this project, feel free to star the repository!
+```
+
