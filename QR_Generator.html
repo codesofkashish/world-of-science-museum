@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Institutional QR Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- QR Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+  <style>
+    :root {
+      --bg: #050505;
+      --panel: #0d0d0d;
+      --border: #1c1c1c;
+      --accent: #00e5ff;
+      --accent2: #39ff14;
+      --text: #ededed;
+      --muted: #9b9b9b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", system-ui, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .panel {
+      background: linear-gradient(145deg, #0a0a0a, #121212);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 35px;
+      box-shadow: 0 0 45px rgba(0, 229, 255, 0.08);
+      animation: rise 0.9s ease forwards;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px;
+      background: #000;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: var(--text);
+      margin-bottom: 18px;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    .btn {
+      padding: 14px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      transition: transform 0.2s ease;
+    }
+
+    .btn-primary {
+      width: 100%;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #000;
+      margin-bottom: 15px;
+    }
+
+    .btn-secondary {
+      width: 100%;
+      background: #111;
+      color: var(--accent);
+      border: 1px solid var(--border);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    #qrArea {
+      margin-top: 25px;
+      text-align: center;
+    }
+
+    .qr-label {
+      margin-top: 12px;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .info h2 {
+      font-size: 1.6rem;
+      color: var(--accent2);
+      margin-bottom: 15px;
+    }
+
+    .info p {
+      color: var(--muted);
+      margin-bottom: 18px;
+      font-size: 0.95rem;
+    }
+
+    .fact {
+      background: #0a0a0a;
+      border-left: 4px solid var(--accent);
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      font-size: 0.9rem;
+    }
+
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER REMAINS SAME -->
+
+  <div class="container">
+    <div class="grid">
+
+      <!-- QR TOOL -->
+      <div class="panel">
+        <h1>QR Code Generator</h1>
+        <p class="subtitle">
+          Institutional utility for generating QR codes linked to museum pages, exhibits, and scientific archives.
+        </p>
+
+        <label>Exhibit / Page Name</label>
+        <input type="text" id="labelText" placeholder="Energy Ball Exhibit">
+
+        <label>URL or Content</label>
+        <input type="text" id="qrText" placeholder="https://museum.com/energy-ball.html">
+
+        <button class="btn btn-primary" onclick="generateQR()">Generate QR</button>
+        <button class="btn btn-secondary" onclick="downloadQR()">Download QR</button>
+
+        <div id="qrArea"></div>
+      </div>
+
+      <!-- INFO -->
+      <div class="info">
+        <h2>Scientific & Institutional Use</h2>
+
+        <p>
+          QR systems are now a core component of modern science museums, allowing visitors to
+          access deeper layers of verified knowledge without physical expansion.
+        </p>
+
+        <div class="fact">
+          🧪 QR codes can store structured data and URLs using **ISO/IEC 18004 standard**,
+          ensuring global compatibility.
+        </div>
+
+        <div class="fact">
+          🛰 Used in laboratories and space agencies for **equipment tracking and data access**.
+        </div>
+
+        <div class="fact">
+          🌱 Reduces printed brochures, supporting **green museum initiatives**.
+        </div>
+
+        <p>
+          This tool is optimized for internal staff usage, exhibit deployment,
+          and long-term digital archiving.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    let qrInstance;
+
+    function generateQR() {
+      const area = document.getElementById("qrArea");
+      area.innerHTML = "";
+
+      const text = document.getElementById("qrText").value;
+      const label = document.getElementById("labelText").value;
+
+      if (!text) {
+        alert("Please enter valid content.");
+        return;
+      }
+
+      qrInstance = new QRCode(area, {
+        text: text,
+        width: 180,
+        height: 180,
+        colorDark: "#00e5ff",
+        colorLight: "#000000"
+      });
+
+      if (label) {
+        const tag = document.createElement("div");
+        tag.className = "qr-label";
+        tag.innerText = label;
+        area.appendChild(tag);
+      }
+    }
+
+    function downloadQR() {
+      const img = document.querySelector("#qrArea img");
+      if (!img) {
+        alert("Generate a QR code first.");
+        return;
+      }
+
+      const link = document.createElement("a");
+      link.href = img.src;
+      link.download = "museum-qr.png";
+      link.click();
+    }
+  </script>
+
+</body>
+</html>
