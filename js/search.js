@@ -8,12 +8,7 @@ function searchSite() {
 
   // pages & keywords
   const pages = {
-    "history": "../html/history.html",
-    "about": "../html/about.html",
-    "gallery": "../html/gallery.html",
-    "contact": "../html/contact.html",
-    "science": "../html/science.html",
-    "museum": "../html/index.html"
+  
   };
 
   for (let key in pages) {
@@ -25,6 +20,7 @@ function searchSite() {
 
   alert("No results found 😔");
 }
+
 
 
 
