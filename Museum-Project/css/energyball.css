@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+/* HEADER (UNCHANGED) */
+.top-bar {
+  background: #5a2f35;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-section img {
+  height: 45px;
+}
+
+.logo-section span {
+  font-weight: 600;
+}
+
+.logo-section input {
+  padding: 6px;
+}
+
+.logo-section button {
+  padding: 6px 10px;
+}
+
+.nav-links a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: cyan;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+#google_translate_element {
+  margin-left: 30%;
+}
+
+.goog-te-gadget {
+  color: white !important;
+  font-size: 14px;
+}
+
+.goog-te-gadget select {
+  background: #0f2544;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+
+.energy-hero {
+  height: 70vh;
+  background: radial-gradient(circle at top, #141b3a, #0b1026);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #f5f7fb;
+}
+
+.energy-hero h1 {
+  font-size: 3.4rem;
+  letter-spacing: 1px;
+  animation: energyReveal 1.4s ease;
+}
+
+.energy-hero p {
+  max-width: 650px;
+  margin: 20px auto 0;
+  opacity: 0.9;
+}
+
+.energy-section {
+  padding: 90px 12%;
+}
+
+.energy-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.energy-section h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.energy-section h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #00e0ff;
+  display: block;
+  margin-top: 10px;
+  animation: pulseLine 2s infinite;
+}
+
+.energy-section p {
+  line-height: 1.9;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.energy-image img {
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  transition: transform 0.6s ease;
+}
+
+.energy-image img:hover {
+  transform: scale(1.04);
+}
+
+/* Animations */
+@keyframes energyReveal {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseLine {
+  0% { opacity: 0.4; }
+  50% { opacity: 1; }
+  100% { opacity: 0.4; }
+}
+
+
+.footer {
+  background-color: #0d3b66;
+}
+
+.footer-social {
+  position: relative;
+  display: flex;
+  gap: 15px;
+  left: 65%;
+  padding-top: 2%;
+}
+
+.footer-social a {
+  display: inline-block;
+  z-index: 10;
+}
+
+.footer-social img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.footer li a {
+  color: aqua;
+}
+
+.footer {
+  position: relative;
+}
+
+.footer-icon-f,
+.footer-icon-t,
+.footer-icon-y {
+  position: relative;
+  z-index: 10;
+}
+
+.footer-icon-f a,
+.footer-icon-t a,
+.footer-icon-y a {
+  display: inline-block;
+}
+
+.caption {
+  display: flex;
+  padding-left: 19%;
+}
+
+.footer-links {
+  display: flex;
+  padding-left: 20%;
+  padding-top: 0%;
+  padding-bottom: 2%;
+}
+
+
+.footer-location {
+  position: absolute;
+  right: 40%;
+  top: 55%;
+  transform: translateY(-50%);
+  width: 420px;
+  color: #e0f7ff;
+}
+
+.footer-location h3 {
+  margin-bottom: 8px;
+  color: #a8dadc;
+  font-size: 17px;
+}
+
+.footer-map iframe {
+  width: 50%;
+  height: 80px;
+  border: none;
+  border-radius: 10px;
+}
+
+.footer-address {
+  margin-top: 6px;
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+
+.bottom{
+  background-color: whitesmoke;
+}
+
+.bottom p {
+  padding-left: 35%;
+  color: black;
+}
+
+

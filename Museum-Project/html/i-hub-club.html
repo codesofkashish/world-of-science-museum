@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I-Hub club | WOS</title>
+    <link rel="stylesheet" href="../css/i-hub.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- TOP BAR -->
+    <header class="top-bar">
+        <div class="logo-section">
+            <img src="../images/logo.jpg" alt="logo">
+            <span>World Of Science</span>
+            <input type="text" id="searchInput" placeholder="Search..." />
+            <button onclick="searchSite()">Search</button>
+        </div>
+
+        <!-- Language Translator -->
+        <div id="google_translate_element"></div>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="media.html">Media</a>
+            <a href="about.html">About</a>
+            <a href="contact_us.html">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <section class="ihub-hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>I-HUB Club</h1>
+            <p>A Collaborative Space for Innovation, Learning & Scientific Curiosity</p>
+        </div>
+    </section>
+
+    <section class="intro reveal">
+        <h2>About the I-HUB Club</h2>
+        <p>
+            The I-HUB Club is a dedicated innovation and learning community established
+            under the Museum of Science to nurture creativity, scientific thinking,
+            and interdisciplinary collaboration.
+        </p>
+        <p>
+            Designed for students, educators, researchers, and young innovators,
+            the club acts as a bridge between scientific knowledge and real-world application.
+        </p>
+    </section>
+
+    <section class="vision split reveal">
+        <div class="text">
+            <h2>Vision & Purpose</h2>
+            <p>
+                The core vision of the I-HUB Club is to create an ecosystem where ideas are encouraged,
+                experimentation is supported, and learning extends beyond textbooks.
+            </p>
+            <p>
+                By providing access to resources, mentorship, and collaborative opportunities,
+                the club empowers members to explore science, technology, and innovation in meaningful ways.
+            </p>
+        </div>
+    </section>
+
+    <section class="activities reveal">
+        <h2>Key Activities & Programs</h2>
+        <p>
+            The I-HUB Club regularly organizes structured programs and hands-on activities, including:
+        </p>
+        <p>
+            • Innovation workshops and design-thinking sessions
+            • Science and technology talks by experts
+            • Student-led research and project showcases
+            • Coding, robotics, and STEM-based learning modules
+            • Collaborative challenges and idea labs
+        </p>
+        <p>
+            These initiatives are carefully curated to balance creativity with scientific rigor.
+        </p>
+    </section>
+
+    <section class="membership split reverse reveal">
+        <div class="text">
+            <h2>Membership & Participation</h2>
+            <p>
+                Membership to the I-HUB Club is open to school students, college students,
+                educators, and early-career professionals with a passion for science and innovation.
+            </p>
+            <p>
+                Members gain opportunities to participate in exclusive workshops,
+                access curated resources, and collaborate on interdisciplinary projects
+                within a professional and inclusive environment.
+            </p>
+        </div>
+    </section>
+
+    <section class="impact reveal">
+        <h2>Impact & Learning Outcomes</h2>
+        <p>
+            Through the I-HUB Club, participants develop critical thinking, problem-solving skills,
+            and an appreciation for scientific inquiry.
+        </p>
+        <p>
+            The club plays a key role in nurturing future scientists, engineers,
+            and innovators by offering exposure to real-world challenges
+            and encouraging responsible innovation.
+        </p>
+    </section>
+
+    <section class="future split reveal">
+        <div class="text">
+            <h2>Looking Ahead</h2>
+            <p>
+                The I-HUB Club aims to expand its initiatives through partnerships with
+                academic institutions, research organizations, and industry experts.
+            </p>
+            <p>
+                By fostering collaboration and continuous learning, the club envisions
+                becoming a recognized platform for innovation-led education within the museum ecosystem.
+            </p>
+        </div>
+    </section>
+
+    <section class="conclusion reveal">
+        <h2>Where Ideas Take Shape</h2>
+        <p>
+            The I-HUB Club represents the museum’s commitment to nurturing curiosity,
+            encouraging innovation, and empowering the next generation of thinkers.
+        </p>
+    </section>
+
+    <footer class="footer">
+
+
+        <div class="footer-social">
+            <a href="https://www.facebook.com/" target="_blank">
+                <img src="../images/facebook.png" alt="Facebook">
+            </a>
+
+            <a href="https://x.com/" target="_blank">
+                <img src="../images/twitter.jpg" alt="Twitter">
+            </a>
+
+            <a href="https://www.youtube.com/" target="_blank">
+                <img src="../images/youtube.png" alt="YouTube">
+            </a>
+        </div>
+
+
+
+        <h3 class="caption">|| links:</h3><br>
+        <div class="footer-links">
+            <ul style="list-style-type: square;">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact_us.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Footer Location (Right Side) -->
+        <div class="footer-location">
+            <h3>📍 World of science, Delhi</h3>
+
+            <div class="footer-map">
+                <iframe src="https://www.google.com/maps?q=National+Science+Centre+Delhi&output=embed" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <p class="footer-address">
+                <b>ADDRESS: </b>World of science, Pragati Maidan,<br>
+                Near Gate No. 1, Bhairon Road,<br>
+                New Delhi – 110001, India
+            </p>
+        </div>
+
+
+
+        <div class="bottom">
+            <p>Copyright © 2025 World of science, Delhi</p>
+        </div>
+
+    </footer>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {
+                    pageLanguage: 'en',
+                    includedLanguages: 'hi,en,fr,de,es,ta,te,bn,ur,pa,ja,zh-CN',
+                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                },
+                'google_translate_element'
+            );
+        }
+    </script>
+
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+    </script>
+
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+    </script>
+
+    <script src="../js/search.js"></script>
+
+    <script>
+        document.getElementById("searchInput").addEventListener("keypress", function (e) {
+            if (e.key === "Enter") {
+                searchSite();
+            }
+        });
+    </script>
+
+</body>
+
+</html>
